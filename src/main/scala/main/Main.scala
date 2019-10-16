@@ -1,11 +1,19 @@
 package main
 
+
+import org.apache.spark.streaming._
+import org.apache.spark.streaming.twitter._
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.{SparkConf, SparkContext}
-import org.apache.spark.streaming.{Seconds, StreamingContext}
-import org.apache.spark.streaming.twitter.TwitterUtils
+import org.apache.spark.streaming.StreamingContext._
 import sentimentanalysis.SentimentAnalysisUtils
-import tweets.{Gettweet, Tweet}
+
+// import com.mongodb.spark._
+// import com.mongodb.spark.config.ReadConfig
+// import com.mongodb.spark.sql._
+// import org.bson.Document
+
 
 // define a class for parsed tweets
 case class Tweet(idTweet:Long,createdAt:java.sql.Date, personName:String,tweetText:String , sentiment : String)
@@ -15,7 +23,7 @@ object Main {
   def main(args:Array[String]): Unit ={
 
     val conf = new SparkConf().setMaster("local[2]").setAppName("NetworkWordCount")
-    val sc = new SparkContext(conf)
+    new SparkContext(conf)
     val spark = SparkSession.builder().config(conf).getOrCreate()
 
     System.setProperty("twitter4j.oauth.consumerKey", "AX2C0qLBowsAgNpP2lZg7A1Nn")
@@ -23,7 +31,7 @@ object Main {
     System.setProperty("twitter4j.oauth.accessToken", "996692412968980481-DBiVzZl7HzMdkYcWWvVePYkyQMqewf7")
     System.setProperty("twitter4j.oauth.accessTokenSecret", "UyffCwEoKFVLBqpkveXggS811Zm1ujuACt3XO7LfqNXXU")
     //spark streaming context
-    var ssc = new StreamingContext(sc, Seconds(5))
+    var ssc = new StreamingContext(conf, Seconds(1))
     // filtrage mot clé
     val filters = Seq("iphone","samsung galaxy")
 
@@ -47,6 +55,7 @@ object Main {
       // MongoSpark.save(mongotweet.write.option("spark.mongodb.output.uri", "mongodb://192.168.2.8/twitterdb.twitter").mode("append"))
     })
 
+    // execute the streaming
     ssc.start()
 
     ssc.awaitTermination()

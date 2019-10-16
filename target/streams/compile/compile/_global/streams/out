@@ -1,0 +1,9 @@
+[debug] Acquiring lock on file C:\Users\ahmed.mnif\IdeaProjects\twitterdemo\project\target\.sbt-compilation-infos\twitterdemo-compile\.sbt-idea-lock ...
+[warn] C:\Users\ahmed.mnif\IdeaProjects\twitterdemo\src\main\scala\main\Main.scala:8:26: imported `Tweet' is permanently hidden by definition of object Tweet in package main
+[warn] import tweets.{Gettweet, Tweet}
+[warn]                          ^
+[warn] C:\Users\ahmed.mnif\IdeaProjects\twitterdemo\src\main\scala\main\Main.scala:22:14: a pure expression does nothing in statement position; you may be omitting necessary parentheses
+[warn]     gettweet.dataToMongo
+[warn]              ^
+[warn] two warnings found
+[debug] Releasing lock on file C:\Users\ahmed.mnif\IdeaProjects\twitterdemo\project\target\.sbt-compilation-infos\twitterdemo-compile\.sbt-idea-lock.
