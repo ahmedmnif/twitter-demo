@@ -1,2 +1,6 @@
-[debug] downloaded https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-postag-models/2012-04-09/stanford-postag-models-2012-04-09.pom
-[debug] downloaded https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-postag-models/2012-04-09/stanford-postag-models-2012-04-09.pom.sha1
+[debug] downloaded https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0.pom
+[debug] downloaded https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0.jar
+[debug] downloaded https://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7-sources.jar
+[debug] downloaded https://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7-javadoc.jar
+[debug] downloaded https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-javadoc.jar
+[debug] downloaded https://repo1.maven.org/maven2/edu/stanford/nlp/stanford-corenlp/3.8.0/stanford-corenlp-3.8.0-sources.jar

@@ -6,6 +6,7 @@ scalaVersion := "2.11.8"
 
 
 libraryDependencies += "edu.stanford.nlp" % "stanford-corenlp" % "3.9.2"
+libraryDependencies += "edu.stanford.nlp" % "stanford-corenlp" % "3.9.2" % "classifier:models"
 
 libraryDependencies += "org.apache.spark" %% "spark-core" % "2.3.2"
 

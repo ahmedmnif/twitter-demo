@@ -22,7 +22,7 @@ object Main {
 
   def main(args:Array[String]): Unit ={
 
-    val conf = new SparkConf().setMaster("local").setAppName("twitterdemo")
+    val conf = new SparkConf().setMaster("local[2]").setAppName("twitterdemo")
     val sc = new SparkContext(conf)
     val spark = SparkSession.builder().config(conf).getOrCreate()
 
